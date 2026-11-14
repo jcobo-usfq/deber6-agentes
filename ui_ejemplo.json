@@ -1,0 +1,20 @@
+{
+  "_nota": "Ilustración didáctica; no es un mensaje A2UI estándar válido.",
+  "catalogo_permitido": ["Card", "Text", "Badge", "Button"],
+  "eventos_permitidos": ["pedir_revision"],
+  "ui": {
+    "component": "Card",
+    "title": "Hallazgo de seguridad",
+    "children": [
+      { "component": "Text", "text": "Archivo: usuarios.py" },
+      { "component": "Text", "text": "Línea 21 · Inyección SQL en buscar_usuario: 'nombre' se concatena en la consulta" },
+      { "component": "Badge", "label": "Severidad: alta", "tone": "alta" },
+      {
+        "component": "Button",
+        "label": "Solicitar revisión adicional",
+        "event": "pedir_revision",
+        "payload": { "hallazgo_id": "usuarios.py:21:sql-injection", "archivo": "usuarios.py", "linea": 21, "severidad": "alta" }
+      }
+    ]
+  }
+}
